@@ -169,6 +169,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 180, 180, L"민용식: 우웩", lstrlen(L"민용식: 우웩"));
             TextOut(hdc, 200, 200, L"김성의: 넹", lstrlen(L"김성의: 넹"));
             TextOut(hdc, 220, 220, L"정성진 : 넹 그렇습니다", lstrlen(L"정성진 : 넹 그렇습니다"));
+            TextOut(hdc, 240, 240, L"박상현 : 다음에 또 자습실 자리 없으면 어떡하지?", lstrlen(L"박상현 : 다음에 또 자습실 자리 없으면 어떡하지?"));
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
