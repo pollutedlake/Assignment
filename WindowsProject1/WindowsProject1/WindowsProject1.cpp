@@ -178,6 +178,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 360, 360, L"김성의 : 일단 스트라이커 뜯기 드래곤언팩커로 시도중", lstrlen(L"김성의 : 일단 스트라이커 뜯기 드래곤언팩커로 시도중"));
             TextOut(hdc, 360, 0, L"정성진 : 태양을 피하는 방법", lstrlen(L"정성진 : 태양을 피하는 방법"));
             TextOut(hdc, 340, 20, L"박상현 : 과제 2 다했는데 테스트해보고 공유할게", lstrlen(L"박상현 : 과제 2 다했는데 테스트해보고 공유할게"));
+            TextOut(hdc, 320, 40, L"민용식 : 리소스 뜯기면 그것도 톡방에 올려서 공유하자", lstrlen(L"민용식 : 리소스 뜯기면 그것도 톡방에 올려서 공유하자"));
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
