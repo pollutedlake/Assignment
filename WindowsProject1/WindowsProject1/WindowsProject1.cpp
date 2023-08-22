@@ -10,12 +10,16 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+HWND _hWnd;
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
+void setWindowSize(int x, int y, int width, int height);
+
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -104,9 +108,13 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    {
       return FALSE;
    }
+   _hWnd = hWnd;
+   setWindowSize(400, 100, 800, 400);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
+
+   
 
    return TRUE;
 }
@@ -121,6 +129,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
+
+
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -153,6 +164,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 80, 80, L"박상현 : 오늘 수업한 내용도 보내줘", lstrlen(L"박상현 : 오늘 수업한 내용도 보내줘"));
             TextOut(hdc, 100, 100, L"민용식 : 안 뜯겨", lstrlen(L"민용식 : 안 뜯겨"));
             TextOut(hdc, 120, 120, L"김성의 : 나도", lstrlen(L"김성의 : 나도"));
+            TextOut(hdc, 140, 140, L"정성진 : 나도 그래", lstrlen(L"정성진 : 나도 그래"));
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
@@ -184,4 +196,19 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     }
     return (INT_PTR)FALSE;
+}
+
+void setWindowSize(int x, int y, int width, int height)
+{
+    RECT rc = { 0, 0, width, height };
+
+    // 실제 윈도우 크기 조정
+    // AdjustWindowRect(): RECT 구조체, 윈도우 스타일, 메뉴 여부 ?
+    AdjustWindowRect(&rc, WS_CAPTION | WS_SYSMENU, false);
+
+    // 얻어온 렉트의 정보로 윈도우 사이즈 세팅
+    SetWindowPos(_hWnd, NULL, x, y,
+        (rc.right - rc.left),
+        (rc.bottom - rc.top),
+        SWP_NOZORDER | SWP_NOMOVE);
 }
