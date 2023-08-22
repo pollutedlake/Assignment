@@ -149,6 +149,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 0, 0, L"박상현 : 과제 시작", lstrlen(L"박상현 : 과제 시작"));
             TextOut(hdc, 20, 20, L"민용식 : 과제?", lstrlen(L"민용식 : 과제?"));
             TextOut(hdc, 40, 40, L"김성의 : 상점마렵네", lstrlen(L"김성의 : 상점마렵네"));
+            TextOut(hdc, 60, 60, L"정성진 : 1945 뜯는거 확인해봐", lstrlen(L"정성진 : 1945 뜯는거 확인해봐"));
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
