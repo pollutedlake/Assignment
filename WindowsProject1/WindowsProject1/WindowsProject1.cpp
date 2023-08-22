@@ -189,6 +189,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 180, 180, L"박상현 : 저녁 어떻게 할래?", lstrlen(L"박상현 : 저녁 어떻게 할래?"));
             TextOut(hdc, 160, 200, L"민용식: 각자 해산하면 집에서 먹기?", lstrlen(L"민용식: 각자 해산하면 집에서 먹기?"));
             TextOut(hdc, 140, 220, L"김성의: 스윗마이홈~", lstrlen(L"김성의: 스윗마이홈~"));
+            TextOut(hdc, 120, 240, L"정성진 : 리소스 추출도 안된다", lstrlen(L"정성진 : 리소스 추출도 안된다"));
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
