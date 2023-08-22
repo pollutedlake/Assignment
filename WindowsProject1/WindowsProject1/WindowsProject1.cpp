@@ -157,6 +157,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+            SetBkMode(hdc, TRANSPARENT);
             TextOut(hdc, 0, 0, L"박상현 : 과제 시작", lstrlen(L"박상현 : 과제 시작"));
             TextOut(hdc, 20, 20, L"민용식 : 과제?", lstrlen(L"민용식 : 과제?"));
             TextOut(hdc, 40, 40, L"김성의 : 상점마렵네", lstrlen(L"김성의 : 상점마렵네"));
@@ -186,6 +187,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 220, 140, L"김성의 : 엄준식먹고싶다", lstrlen(L"김성의 : 엄준식먹고싶다"));
             TextOut(hdc, 200, 160, L"정성진 : 아직도 안된다", lstrlen(L"정성진 : 아직도 안된다"));
             TextOut(hdc, 180, 180, L"박상현 : 저녁 어떻게 할래?", lstrlen(L"박상현 : 저녁 어떻게 할래?"));
+            TextOut(hdc, 160, 200, L"민용식: 각자 해산하면 집에서 먹기?", lstrlen(L"민용식: 각자 해산하면 집에서 먹기?"));
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
