@@ -183,6 +183,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 280, 80, L"정성진 : 깃허브 용량 제한이 안풀린다ㅠㅠㅠ", lstrlen(L"정성진 : 깃허브 용량 제한이 안풀린다ㅠㅠㅠ"));
             TextOut(hdc, 260, 100, L"박상현 : 과제2 완 배포한다. 이해 안되면 물어봐", lstrlen(L"박상현 : 과제2 완 배포한다. 이해 안되면 물어봐"));
             TextOut(hdc, 240, 120, L"민용식 : 굿 근데 우리 저녁도 먹고 가?", lstrlen(L"민용식 : 굿 근데 우리 저녁도 먹고 가?"));
+            TextOut(hdc, 220, 140, L"김성의 : 엄준식먹고싶다", lstrlen(L"김성의 : 엄준식먹고싶다"));
 
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
