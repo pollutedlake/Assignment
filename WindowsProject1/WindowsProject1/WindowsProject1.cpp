@@ -109,7 +109,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
       return FALSE;
    }
    _hWnd = hWnd;
-   setWindowSize(400, 100, 800, 400);
+   setWindowSize(400, 100, 1000, 400);
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -174,6 +174,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc, 280, 280, L"김성의 : 근데 우리 전부 선헤이븐 해본적없으니까 팀명 일단박조 어떰", lstrlen(L"김성의 : 근데 우리 전부 선헤이븐 해본적없으니까 팀명 일단박조 어떰"));
             TextOut(hdc, 300, 300, L"정성진 : 일단박조..?", lstrlen(L"정성진 : 일단박조..?"));
             TextOut(hdc, 320, 320, L"민용식 : 덤프트럭", lstrlen(L"민용식 : 덤프트럭"));
+            TextOut(hdc, 340, 340, L"박상현 : ㅋㅋㅋㅋ 후보에 추가해 놓을게 과제 2번은 마지막 하나 남음", lstrlen(L"박상현 : ㅋㅋㅋㅋ 후보에 추가해 놓을게 과제 2번은 마지막 하나 남음"));
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
